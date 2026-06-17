@@ -19,6 +19,7 @@
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
       padding-bottom:calc(22px + var(--safe-bottom));
     }
+    .top-anchor { display:block; position:relative; top:0; height:0; }
     header {
       position:sticky; top:0; z-index:10; background:rgba(255,255,255,.98);
       border-bottom:1px solid var(--line); padding:calc(12px + var(--safe-top)) 12px 10px;
@@ -58,6 +59,7 @@
       text-decoration:none; font-size:14px; font-weight:950; border:1px solid transparent; text-align:center;
     }
     .btn.primary { background:var(--blue); color:#fff; }
+    .btn.current { background:var(--green); color:#fff; grid-column:1 / -1; }
     .btn.large { min-height:52px; font-size:15px; }
     .btn.waze { background:var(--waze); color:#052331; }
     .btn.secondary { background:#f1f3f4; color:#202124; border-color:var(--line); }
@@ -68,6 +70,7 @@
       text-decoration:none; background:var(--waze); color:#052331; border-radius:999px;
       padding:9px 12px; font-size:13px; font-weight:950;
     }
+    .quick.google-current { background:var(--green); color:#fff; }
     .part-link {
       display:block; text-decoration:none; color:var(--blue); font-weight:900; padding:9px 0;
       border-top:1px solid #edf0f2;
@@ -111,7 +114,7 @@
 </header>
 <main>
   <div class="intro">
-    Обери маршрут зверху. Для огляду відкривай повний маршрут у Google Maps. Для тренування з урахуванням трафіку відкривай Waze послідовно до наступних точок.
+    Обери маршрут зверху. Для огляду відкривай повний маршрут у Google Maps. Щоб почати з поточного місця не з першої точки, обери потрібну точку в блоці Google Maps від мого місцезнаходження.
   </div>
   
     <section class="route" id="route-1">
@@ -126,6 +129,17 @@
         <a class="btn primary large" href="https://www.google.com/maps/dir/?api=1&amp;origin=50.4865819,30.3942046&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;waypoints=50.4862451,30.3960940|50.4866666,30.3955791|50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">
           Відкрити весь маршрут у Google Maps
         </a>
+      </div>
+      <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865819,30.3942046|50.4862451,30.3960940|50.4866666,30.3955791|50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862451,30.3960940|50.4866666,30.3955791|50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866666,30.3955791|50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4815977,30.3957863|50.4878223,30.3941388">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878223,30.3941388">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate">Т.8</a></div>
       </div>
       <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
@@ -145,6 +159,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865819, 30.3942046</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865819,30.3942046|50.4862451,30.3960940|50.4866666,30.3955791|50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865819%2C30.3942046&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865819,30.3942046">Google точка</a>
             </div>
@@ -157,6 +172,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862451, 30.3960940</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862451,30.3960940|50.4866666,30.3955791|50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862451%2C30.3960940&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862451,30.3960940">Google точка</a>
             </div>
@@ -169,6 +185,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4866666, 30.3955791</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866666,30.3955791|50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866666%2C30.3955791&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866666,30.3955791">Google точка</a>
             </div>
@@ -181,6 +198,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4810374, 30.4071635</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4810374,30.4071635|50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4810374%2C30.4071635&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4810374,30.4071635">Google точка</a>
             </div>
@@ -193,6 +211,7 @@
             <h3>Поворот на вул. Ігоря Турчина</h3>
             <div class="coords">50.4819282, 30.4029943</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4819282,30.4029943|50.4815977,30.3957863|50.4878223,30.3941388">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4819282%2C30.4029943&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4819282,30.4029943">Google точка</a>
             </div>
@@ -205,6 +224,7 @@
             <h3>Повернення на вул. Мрії</h3>
             <div class="coords">50.4815977, 30.3957863</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4815977,30.3957863|50.4878223,30.3941388">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4815977%2C30.3957863&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4815977,30.3957863">Google точка</a>
             </div>
@@ -217,6 +237,7 @@
             <h3>Сирецько-Садова — розворот і повернення до ТСЦ</h3>
             <div class="coords">50.4878223, 30.3941388</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878223,30.3941388">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878223%2C30.3941388&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878223,30.3941388">Google точка</a>
             </div>
@@ -229,6 +250,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865083, 30.3944231</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865083,30.3944231&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865083%2C30.3944231&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865083,30.3944231">Google точка</a>
             </div>
@@ -251,6 +273,18 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865986,30.3941926|50.4935591,30.3792992|50.5073771,30.4090167|50.5072440,30.4075951|50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4935591,30.3792992|50.5073771,30.4090167|50.5072440,30.4075951|50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.5073771,30.4090167|50.5072440,30.4075951|50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.5072440,30.4075951|50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4863211,30.3962070|50.4878584,30.3942579">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878584,30.3942579">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate">Т.9</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4935591%2C30.3792992&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.5073771%2C30.4090167&amp;navigate=yes">Т.3</a>
@@ -269,6 +303,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865986, 30.3941926</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865986,30.3941926|50.4935591,30.3792992|50.5073771,30.4090167|50.5072440,30.4075951|50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865986%2C30.3941926&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865986,30.3941926">Google точка</a>
             </div>
@@ -281,6 +316,7 @@
             <h3>Поворот на вул. Газопровідну</h3>
             <div class="coords">50.4935591, 30.3792992</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4935591,30.3792992|50.5073771,30.4090167|50.5072440,30.4075951|50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4935591%2C30.3792992&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4935591,30.3792992">Google точка</a>
             </div>
@@ -293,6 +329,7 @@
             <h3>Коло Івана Виговського / просп. Європейського Союзу — в’їзд</h3>
             <div class="coords">50.5073771, 30.4090167</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.5073771,30.4090167|50.5072440,30.4075951|50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.5073771%2C30.4090167&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.5073771,30.4090167">Google точка</a>
             </div>
@@ -305,6 +342,7 @@
             <h3>Коло Івана Виговського / просп. Європейського Союзу — виїзд</h3>
             <div class="coords">50.5072440, 30.4075951</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.5072440,30.4075951|50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.5072440%2C30.4075951&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.5072440,30.4075951">Google точка</a>
             </div>
@@ -317,6 +355,7 @@
             <h3>Поворот на вул. Стеценка</h3>
             <div class="coords">50.4821437, 30.4057020</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4821437,30.4057020|50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4821437%2C30.4057020&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4821437,30.4057020">Google точка</a>
             </div>
@@ -329,6 +368,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4865225, 30.3953970</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865225,30.3953970|50.4863211,30.3962070|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865225%2C30.3953970&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865225,30.3953970">Google точка</a>
             </div>
@@ -341,6 +381,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4863211, 30.3962070</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4863211,30.3962070|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4863211%2C30.3962070&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4863211,30.3962070">Google точка</a>
             </div>
@@ -353,6 +394,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878584, 30.3942579</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878584%2C30.3942579&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878584,30.3942579">Google точка</a>
             </div>
@@ -365,6 +407,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865177, 30.3944411</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865177%2C30.3944411&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865177,30.3944411">Google точка</a>
             </div>
@@ -387,6 +430,19 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866143,30.3941706|50.4873407,30.3943120|50.4862313,30.3960858|50.4866255,30.3954930|50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4873407,30.3943120|50.4862313,30.3960858|50.4866255,30.3954930|50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862313,30.3960858|50.4866255,30.3954930|50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866255,30.3954930|50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865494,30.3962091|50.4878561,30.3942440">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878561,30.3942440">Т.9</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate">Т.10</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4873407%2C30.3943120&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4862313%2C30.3960858&amp;navigate=yes">Т.3</a>
@@ -406,6 +462,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866143, 30.3941706</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866143,30.3941706|50.4873407,30.3943120|50.4862313,30.3960858|50.4866255,30.3954930|50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866143%2C30.3941706&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866143,30.3941706">Google точка</a>
             </div>
@@ -418,6 +475,7 @@
             <h3>Виїзд від ТСЦ на вул. Стеценка</h3>
             <div class="coords">50.4873407, 30.3943120</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4873407,30.3943120|50.4862313,30.3960858|50.4866255,30.3954930|50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4873407%2C30.3943120&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4873407,30.3943120">Google точка</a>
             </div>
@@ -430,6 +488,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862313, 30.3960858</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862313,30.3960858|50.4866255,30.3954930|50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862313%2C30.3960858&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862313,30.3960858">Google точка</a>
             </div>
@@ -442,6 +501,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4866255, 30.3954930</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866255,30.3954930|50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866255%2C30.3954930&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866255,30.3954930">Google точка</a>
             </div>
@@ -454,6 +514,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4809593, 30.4072924</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4809593,30.4072924|50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4809593%2C30.4072924&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4809593,30.4072924">Google точка</a>
             </div>
@@ -466,6 +527,7 @@
             <h3>Вул. Ігоря Турчина — контрольна точка</h3>
             <div class="coords">50.4814638, 30.3993498</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4814638,30.3993498|50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4814638%2C30.3993498&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4814638,30.3993498">Google точка</a>
             </div>
@@ -478,6 +540,7 @@
             <h3>Розворот на вул. Салютній</h3>
             <div class="coords">50.4719213, 30.3959536</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4719213,30.3959536|50.4865494,30.3962091|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4719213%2C30.3959536&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4719213,30.3959536">Google точка</a>
             </div>
@@ -490,6 +553,7 @@
             <h3>Коло Мрії / Стеценка — контрольна точка</h3>
             <div class="coords">50.4865494, 30.3962091</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865494,30.3962091|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865494%2C30.3962091&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865494,30.3962091">Google точка</a>
             </div>
@@ -502,6 +566,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878561, 30.3942440</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878561%2C30.3942440&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878561,30.3942440">Google точка</a>
             </div>
@@ -514,6 +579,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865287, 30.3944730</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865287,30.3944730&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865287%2C30.3944730&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865287,30.3944730">Google точка</a>
             </div>
@@ -536,6 +602,18 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866718,30.3940689|50.4862451,30.3960940|50.4865760,30.3954385|50.4811307,30.4070384|50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862451,30.3960940|50.4865760,30.3954385|50.4811307,30.4070384|50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865760,30.3954385|50.4811307,30.4070384|50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4811307,30.4070384|50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4868422,30.3956716|50.4878534,30.3941866">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878534,30.3941866">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate">Т.9</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862451%2C30.3960940&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865760%2C30.3954385&amp;navigate=yes">Т.3</a>
@@ -554,6 +632,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866718, 30.3940689</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866718,30.3940689|50.4862451,30.3960940|50.4865760,30.3954385|50.4811307,30.4070384|50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866718%2C30.3940689&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866718,30.3940689">Google точка</a>
             </div>
@@ -566,6 +645,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862451, 30.3960940</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862451,30.3960940|50.4865760,30.3954385|50.4811307,30.4070384|50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862451%2C30.3960940&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862451,30.3960940">Google точка</a>
             </div>
@@ -578,6 +658,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865760, 30.3954385</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865760,30.3954385|50.4811307,30.4070384|50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865760%2C30.3954385&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865760,30.3954385">Google точка</a>
             </div>
@@ -590,6 +671,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4811307, 30.4070384</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4811307,30.4070384|50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4811307%2C30.4070384&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4811307,30.4070384">Google точка</a>
             </div>
@@ -602,6 +684,7 @@
             <h3>Поворот на вул. Салютній</h3>
             <div class="coords">50.4722305, 30.4057989</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4722305,30.4057989|50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4722305%2C30.4057989&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4722305,30.4057989">Google точка</a>
             </div>
@@ -614,6 +697,7 @@
             <h3>Поворот на вул. Мрії</h3>
             <div class="coords">50.4726402, 30.3959548</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4726402,30.3959548|50.4868422,30.3956716|50.4878534,30.3941866">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4726402%2C30.3959548&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4726402,30.3959548">Google точка</a>
             </div>
@@ -626,6 +710,7 @@
             <h3>Коло Мрії / Стеценка — контрольна точка</h3>
             <div class="coords">50.4868422, 30.3956716</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4868422,30.3956716|50.4878534,30.3941866">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4868422%2C30.3956716&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4868422,30.3956716">Google точка</a>
             </div>
@@ -638,6 +723,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878534, 30.3941866</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878534,30.3941866">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878534%2C30.3941866&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878534,30.3941866">Google точка</a>
             </div>
@@ -650,6 +736,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866144, 30.3942564</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4866144,30.3942564&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866144%2C30.3942564&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866144,30.3942564">Google точка</a>
             </div>
@@ -672,6 +759,17 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866718,30.3940689|50.4862406,30.3961152|50.4865564,30.3954339|50.4813582,30.4065793|50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862406,30.3961152|50.4865564,30.3954339|50.4813582,30.4065793|50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865564,30.3954339|50.4813582,30.4065793|50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4813582,30.4065793|50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4821696,30.4051154|50.4872997,30.3943978">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4872997,30.3943978">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate">Т.8</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862406%2C30.3961152&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865564%2C30.3954339&amp;navigate=yes">Т.3</a>
@@ -689,6 +787,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866718, 30.3940689</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866718,30.3940689|50.4862406,30.3961152|50.4865564,30.3954339|50.4813582,30.4065793|50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866718%2C30.3940689&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866718,30.3940689">Google точка</a>
             </div>
@@ -701,6 +800,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862406, 30.3961152</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862406,30.3961152|50.4865564,30.3954339|50.4813582,30.4065793|50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862406%2C30.3961152&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862406,30.3961152">Google точка</a>
             </div>
@@ -713,6 +813,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865564, 30.3954339</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865564,30.3954339|50.4813582,30.4065793|50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865564%2C30.3954339&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865564,30.3954339">Google точка</a>
             </div>
@@ -725,6 +826,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4813582, 30.4065793</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4813582,30.4065793|50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4813582%2C30.4065793&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4813582,30.4065793">Google точка</a>
             </div>
@@ -737,6 +839,7 @@
             <h3>Розворот на вул. Ружинській</h3>
             <div class="coords">50.4699381, 30.4058279</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4699381,30.4058279|50.4821696,30.4051154|50.4872997,30.3943978">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4699381%2C30.4058279&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4699381,30.4058279">Google точка</a>
             </div>
@@ -749,6 +852,7 @@
             <h3>Район Данила Щербаківського / Марченка — поворот</h3>
             <div class="coords">50.4821696, 30.4051154</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4821696,30.4051154|50.4872997,30.3943978">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4821696%2C30.4051154&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4821696,30.4051154">Google точка</a>
             </div>
@@ -761,6 +865,7 @@
             <h3>Заїзд до ТСЦ МВС 8042 з вул. Стеценка</h3>
             <div class="coords">50.4872997, 30.3943978</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4872997,30.3943978">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4872997%2C30.3943978&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4872997,30.3943978">Google точка</a>
             </div>
@@ -773,6 +878,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865714, 30.3943052</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865714%2C30.3943052&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865714,30.3943052">Google точка</a>
             </div>
@@ -795,6 +901,18 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866362,30.3941282|50.4862983,30.3961291|50.4865611,30.3953834|50.4814608,30.3957471|50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862983,30.3961291|50.4865611,30.3953834|50.4814608,30.3957471|50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865611,30.3953834|50.4814608,30.3957471|50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4814608,30.3957471|50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4814989,30.4018875|50.4862451,30.3960940">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862451,30.3960940">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate">Т.9</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862983%2C30.3961291&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865611%2C30.3953834&amp;navigate=yes">Т.3</a>
@@ -813,6 +931,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866362, 30.3941282</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866362,30.3941282|50.4862983,30.3961291|50.4865611,30.3953834|50.4814608,30.3957471|50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866362%2C30.3941282&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866362,30.3941282">Google точка</a>
             </div>
@@ -825,6 +944,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862983, 30.3961291</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862983,30.3961291|50.4865611,30.3953834|50.4814608,30.3957471|50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862983%2C30.3961291&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862983,30.3961291">Google точка</a>
             </div>
@@ -837,6 +957,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865611, 30.3953834</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865611,30.3953834|50.4814608,30.3957471|50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865611%2C30.3953834&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865611,30.3953834">Google точка</a>
             </div>
@@ -849,6 +970,7 @@
             <h3>Розворот на вул. Ігоря Турчина</h3>
             <div class="coords">50.4814608, 30.3957471</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4814608,30.3957471|50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4814608%2C30.3957471&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4814608,30.3957471">Google точка</a>
             </div>
@@ -861,6 +983,7 @@
             <h3>Коло Мрії / Стеценка — контрольна точка</h3>
             <div class="coords">50.4862876, 30.3964085</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862876,30.3964085|50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862876%2C30.3964085&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862876,30.3964085">Google точка</a>
             </div>
@@ -873,6 +996,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4811924, 30.4069666</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4811924,30.4069666|50.4814989,30.4018875|50.4862451,30.3960940">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4811924%2C30.4069666&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4811924,30.4069666">Google точка</a>
             </div>
@@ -885,6 +1009,7 @@
             <h3>Поворот на вул. Ігоря Турчина</h3>
             <div class="coords">50.4814989, 30.4018875</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4814989,30.4018875|50.4862451,30.3960940">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4814989%2C30.4018875&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4814989,30.4018875">Google точка</a>
             </div>
@@ -897,6 +1022,7 @@
             <h3>Коло Мрії / Стеценка — виїзд на вул. Стеценка</h3>
             <div class="coords">50.4862451, 30.3960940</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862451,30.3960940">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862451%2C30.3960940&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862451,30.3960940">Google точка</a>
             </div>
@@ -909,6 +1035,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865177, 30.3944411</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865177%2C30.3944411&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865177,30.3944411">Google точка</a>
             </div>
@@ -931,6 +1058,16 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866570,30.3940810|50.4862422,30.3960499|50.4865760,30.3954385|50.4645744,30.3960568|50.4866311,30.3961014|50.4878584,30.3942579">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862422,30.3960499|50.4865760,30.3954385|50.4645744,30.3960568|50.4866311,30.3961014|50.4878584,30.3942579">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865760,30.3954385|50.4645744,30.3960568|50.4866311,30.3961014|50.4878584,30.3942579">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4645744,30.3960568|50.4866311,30.3961014|50.4878584,30.3942579">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866311,30.3961014|50.4878584,30.3942579">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878584,30.3942579">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate">Т.7</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862422%2C30.3960499&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865760%2C30.3954385&amp;navigate=yes">Т.3</a>
@@ -947,6 +1084,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866570, 30.3940810</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866570,30.3940810|50.4862422,30.3960499|50.4865760,30.3954385|50.4645744,30.3960568|50.4866311,30.3961014|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866570%2C30.3940810&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866570,30.3940810">Google точка</a>
             </div>
@@ -959,6 +1097,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862422, 30.3960499</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862422,30.3960499|50.4865760,30.3954385|50.4645744,30.3960568|50.4866311,30.3961014|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862422%2C30.3960499&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862422,30.3960499">Google точка</a>
             </div>
@@ -971,6 +1110,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865760, 30.3954385</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865760,30.3954385|50.4645744,30.3960568|50.4866311,30.3961014|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865760%2C30.3954385&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865760,30.3954385">Google точка</a>
             </div>
@@ -983,6 +1123,7 @@
             <h3>Розворот на вул. Естонській</h3>
             <div class="coords">50.4645744, 30.3960568</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4645744,30.3960568|50.4866311,30.3961014|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4645744%2C30.3960568&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4645744,30.3960568">Google точка</a>
             </div>
@@ -995,6 +1136,7 @@
             <h3>Коло Мрії / Стеценка — виїзд на вул. Стеценка</h3>
             <div class="coords">50.4866311, 30.3961014</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866311,30.3961014|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866311%2C30.3961014&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866311,30.3961014">Google точка</a>
             </div>
@@ -1007,6 +1149,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878584, 30.3942579</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878584%2C30.3942579&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878584,30.3942579">Google точка</a>
             </div>
@@ -1019,6 +1162,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865714, 30.3943052</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865714,30.3943052&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865714%2C30.3943052&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865714,30.3943052">Google точка</a>
             </div>
@@ -1041,6 +1185,17 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866718,30.3940689|50.4862422,30.3960499|50.4865225,30.3953970|50.4982961,30.3653566|50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862422,30.3960499|50.4865225,30.3953970|50.4982961,30.3653566|50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865225,30.3953970|50.4982961,30.3653566|50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4982961,30.3653566|50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862465,30.3962218|50.4878561,30.3942440">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878561,30.3942440">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate">Т.8</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862422%2C30.3960499&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865225%2C30.3953970&amp;navigate=yes">Т.3</a>
@@ -1058,6 +1213,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866718, 30.3940689</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866718,30.3940689|50.4862422,30.3960499|50.4865225,30.3953970|50.4982961,30.3653566|50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866718%2C30.3940689&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866718,30.3940689">Google точка</a>
             </div>
@@ -1070,6 +1226,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862422, 30.3960499</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862422,30.3960499|50.4865225,30.3953970|50.4982961,30.3653566|50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862422%2C30.3960499&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862422,30.3960499">Google точка</a>
             </div>
@@ -1082,6 +1239,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865225, 30.3953970</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865225,30.3953970|50.4982961,30.3653566|50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865225%2C30.3953970&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865225,30.3953970">Google точка</a>
             </div>
@@ -1094,6 +1252,7 @@
             <h3>Виїзд у напрямку Кільцевої дороги</h3>
             <div class="coords">50.4982961, 30.3653566</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4982961,30.3653566|50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4982961%2C30.3653566&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4982961,30.3653566">Google точка</a>
             </div>
@@ -1106,6 +1265,7 @@
             <h3>Вул. Стеценка — розворот</h3>
             <div class="coords">50.4970677, 30.3661934</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4970677,30.3661934|50.4862465,30.3962218|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4970677%2C30.3661934&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4970677,30.3661934">Google точка</a>
             </div>
@@ -1118,6 +1278,7 @@
             <h3>Коло Мрії / Стеценка — проїзд по колу</h3>
             <div class="coords">50.4862465, 30.3962218</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862465,30.3962218|50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862465%2C30.3962218&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862465,30.3962218">Google точка</a>
             </div>
@@ -1130,6 +1291,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878561, 30.3942440</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878561,30.3942440">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878561%2C30.3942440&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878561,30.3942440">Google точка</a>
             </div>
@@ -1142,6 +1304,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865805, 30.3942459</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865805,30.3942459&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865805%2C30.3942459&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865805,30.3942459">Google точка</a>
             </div>
@@ -1164,6 +1327,19 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866362,30.3941282|50.4862422,30.3960499|50.4865760,30.3954385|50.4814682,30.3960054|50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862422,30.3960499|50.4865760,30.3954385|50.4814682,30.3960054|50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865760,30.3954385|50.4814682,30.3960054|50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4814682,30.3960054|50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4811307,30.4070384|50.4878857,30.3942819">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878857,30.3942819">Т.9</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate">Т.10</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862422%2C30.3960499&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865760%2C30.3954385&amp;navigate=yes">Т.3</a>
@@ -1183,6 +1359,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866362, 30.3941282</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866362,30.3941282|50.4862422,30.3960499|50.4865760,30.3954385|50.4814682,30.3960054|50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866362%2C30.3941282&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866362,30.3941282">Google точка</a>
             </div>
@@ -1195,6 +1372,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862422, 30.3960499</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862422,30.3960499|50.4865760,30.3954385|50.4814682,30.3960054|50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862422%2C30.3960499&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862422,30.3960499">Google точка</a>
             </div>
@@ -1207,6 +1385,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865760, 30.3954385</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865760,30.3954385|50.4814682,30.3960054|50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865760%2C30.3954385&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865760,30.3954385">Google точка</a>
             </div>
@@ -1219,6 +1398,7 @@
             <h3>Поворот на вул. Ігоря Турчина</h3>
             <div class="coords">50.4814682, 30.3960054</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4814682,30.3960054|50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4814682%2C30.3960054&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4814682,30.3960054">Google точка</a>
             </div>
@@ -1231,6 +1411,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4809598, 30.4062730</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4809598,30.4062730|50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4809598%2C30.4062730&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4809598,30.4062730">Google точка</a>
             </div>
@@ -1243,6 +1424,7 @@
             <h3>Виїзд на вул. Януша Корчака</h3>
             <div class="coords">50.4657908, 30.4149446</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4657908,30.4149446|50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4657908%2C30.4149446&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4657908,30.4149446">Google точка</a>
             </div>
@@ -1255,6 +1437,7 @@
             <h3>Розворот у районі вул. Голди Меїр</h3>
             <div class="coords">50.4678463, 30.4156098</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4678463,30.4156098|50.4811307,30.4070384|50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4678463%2C30.4156098&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4678463,30.4156098">Google точка</a>
             </div>
@@ -1267,6 +1450,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4811307, 30.4070384</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4811307,30.4070384|50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4811307%2C30.4070384&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4811307,30.4070384">Google точка</a>
             </div>
@@ -1279,6 +1463,7 @@
             <h3>Сирецько-Садова — повернення до ТСЦ</h3>
             <div class="coords">50.4878857, 30.3942819</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878857,30.3942819">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878857%2C30.3942819&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878857,30.3942819">Google точка</a>
             </div>
@@ -1291,6 +1476,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865086, 30.3944576</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865086,30.3944576&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865086%2C30.3944576&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865086,30.3944576">Google точка</a>
             </div>
@@ -1313,6 +1499,19 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866211,30.3941531|50.4862422,30.3960499|50.4865760,30.3954385|50.4719594,30.3987898|50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862422,30.3960499|50.4865760,30.3954385|50.4719594,30.3987898|50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865760,30.3954385|50.4719594,30.3987898|50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4719594,30.3987898|50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866930,30.3960824|50.4878584,30.3942579">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878584,30.3942579">Т.9</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate">Т.10</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862422%2C30.3960499&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865760%2C30.3954385&amp;navigate=yes">Т.3</a>
@@ -1332,6 +1531,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866211, 30.3941531</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866211,30.3941531|50.4862422,30.3960499|50.4865760,30.3954385|50.4719594,30.3987898|50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866211%2C30.3941531&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866211,30.3941531">Google точка</a>
             </div>
@@ -1344,6 +1544,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862422, 30.3960499</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862422,30.3960499|50.4865760,30.3954385|50.4719594,30.3987898|50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862422%2C30.3960499&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862422,30.3960499">Google точка</a>
             </div>
@@ -1356,6 +1557,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865760, 30.3954385</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865760,30.3954385|50.4719594,30.3987898|50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865760%2C30.3954385&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865760,30.3954385">Google точка</a>
             </div>
@@ -1368,6 +1570,7 @@
             <h3>Поворот на вул. Салютній</h3>
             <div class="coords">50.4719594, 30.3987898</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4719594,30.3987898|50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4719594%2C30.3987898&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4719594,30.3987898">Google точка</a>
             </div>
@@ -1380,6 +1583,7 @@
             <h3>Поворот на вул. Ружинську</h3>
             <div class="coords">50.4698503, 30.4065359</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4698503,30.4065359|50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4698503%2C30.4065359&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4698503,30.4065359">Google точка</a>
             </div>
@@ -1392,6 +1596,7 @@
             <h3>Поворот на вул. Вірського</h3>
             <div class="coords">50.4711638, 30.4148078</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4711638,30.4148078|50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4711638%2C30.4148078&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4711638,30.4148078">Google точка</a>
             </div>
@@ -1404,6 +1609,7 @@
             <h3>Поворот на вул. Мрії</h3>
             <div class="coords">50.4728394, 30.3959690</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4728394,30.3959690|50.4866930,30.3960824|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4728394%2C30.3959690&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4728394,30.3959690">Google точка</a>
             </div>
@@ -1416,6 +1622,7 @@
             <h3>Коло Мрії / Стеценка — виїзд на вул. Стеценка</h3>
             <div class="coords">50.4866930, 30.3960824</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866930,30.3960824|50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866930%2C30.3960824&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866930,30.3960824">Google точка</a>
             </div>
@@ -1428,6 +1635,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878584, 30.3942579</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878584,30.3942579">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878584%2C30.3942579&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878584,30.3942579">Google точка</a>
             </div>
@@ -1440,6 +1648,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865177, 30.3944411</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865177,30.3944411&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865177%2C30.3944411&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865177,30.3944411">Google точка</a>
             </div>
@@ -1462,6 +1671,19 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866331,30.3941481|50.4862338,30.3961061|50.4865785,30.3954329|50.4815364,30.3957447|50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862338,30.3961061|50.4865785,30.3954329|50.4815364,30.3957447|50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865785,30.3954329|50.4815364,30.3957447|50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4815364,30.3957447|50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862276,30.3960376|50.4878727,30.3941923">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878727,30.3941923">Т.9</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate">Т.10</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862338%2C30.3961061&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865785%2C30.3954329&amp;navigate=yes">Т.3</a>
@@ -1481,6 +1703,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866331, 30.3941481</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866331,30.3941481|50.4862338,30.3961061|50.4865785,30.3954329|50.4815364,30.3957447|50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866331%2C30.3941481&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866331,30.3941481">Google точка</a>
             </div>
@@ -1493,6 +1716,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862338, 30.3961061</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862338,30.3961061|50.4865785,30.3954329|50.4815364,30.3957447|50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862338%2C30.3961061&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862338,30.3961061">Google точка</a>
             </div>
@@ -1505,6 +1729,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865785, 30.3954329</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865785,30.3954329|50.4815364,30.3957447|50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865785%2C30.3954329&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865785,30.3954329">Google точка</a>
             </div>
@@ -1517,6 +1742,7 @@
             <h3>Розворот на вул. Ігоря Турчина</h3>
             <div class="coords">50.4815364, 30.3957447</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4815364,30.3957447|50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4815364%2C30.3957447&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4815364,30.3957447">Google точка</a>
             </div>
@@ -1529,6 +1755,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878849, 30.3942697</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878849,30.3942697|50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878849%2C30.3942697&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878849,30.3942697">Google точка</a>
             </div>
@@ -1541,6 +1768,7 @@
             <h3>Розворот / контрольна точка</h3>
             <div class="coords">50.4912993, 30.3841608</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4912993,30.3841608|50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4912993%2C30.3841608&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4912993,30.3841608">Google точка</a>
             </div>
@@ -1553,6 +1781,7 @@
             <h3>Вул. Стеценка — об’їзд через парковку</h3>
             <div class="coords">50.4877703, 30.3915369</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4877703,30.3915369|50.4862276,30.3960376|50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4877703%2C30.3915369&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4877703,30.3915369">Google точка</a>
             </div>
@@ -1565,6 +1794,7 @@
             <h3>Коло Мрії / Стеценка — проїзд по колу</h3>
             <div class="coords">50.4862276, 30.3960376</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862276,30.3960376|50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862276%2C30.3960376&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862276,30.3960376">Google точка</a>
             </div>
@@ -1577,6 +1807,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878727, 30.3941923</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878727,30.3941923">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878727%2C30.3941923&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878727,30.3941923">Google точка</a>
             </div>
@@ -1589,6 +1820,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865996, 30.3943478</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865996,30.3943478&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865996%2C30.3943478&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865996,30.3943478">Google точка</a>
             </div>
@@ -1611,6 +1843,18 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866150,30.3941869|50.4862336,30.3960859|50.4865872,30.3954419|50.4813180,30.4066894|50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862336,30.3960859|50.4865872,30.3954419|50.4813180,30.4066894|50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865872,30.3954419|50.4813180,30.4066894|50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4813180,30.4066894|50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4912459,30.3843160|50.4889941,30.3891474">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4889941,30.3891474">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate">Т.9</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862336%2C30.3960859&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865872%2C30.3954419&amp;navigate=yes">Т.3</a>
@@ -1629,6 +1873,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866150, 30.3941869</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866150,30.3941869|50.4862336,30.3960859|50.4865872,30.3954419|50.4813180,30.4066894|50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866150%2C30.3941869&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866150,30.3941869">Google точка</a>
             </div>
@@ -1641,6 +1886,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862336, 30.3960859</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862336,30.3960859|50.4865872,30.3954419|50.4813180,30.4066894|50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862336%2C30.3960859&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862336,30.3960859">Google точка</a>
             </div>
@@ -1653,6 +1899,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865872, 30.3954419</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865872,30.3954419|50.4813180,30.4066894|50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865872%2C30.3954419&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865872,30.3954419">Google точка</a>
             </div>
@@ -1665,6 +1912,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4813180, 30.4066894</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4813180,30.4066894|50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4813180%2C30.4066894&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4813180,30.4066894">Google точка</a>
             </div>
@@ -1677,6 +1925,7 @@
             <h3>Поворот на вул. Ігоря Турчина</h3>
             <div class="coords">50.4815194, 30.4020576</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4815194,30.4020576|50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4815194%2C30.4020576&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4815194,30.4020576">Google точка</a>
             </div>
@@ -1689,6 +1938,7 @@
             <h3>Поворот на вул. Мрії</h3>
             <div class="coords">50.4823421, 30.3957598</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4823421,30.3957598|50.4912459,30.3843160|50.4889941,30.3891474">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4823421%2C30.3957598&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4823421,30.3957598">Google точка</a>
             </div>
@@ -1701,6 +1951,7 @@
             <h3>Вул. Стеценка — розворот</h3>
             <div class="coords">50.4912459, 30.3843160</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4912459,30.3843160|50.4889941,30.3891474">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4912459%2C30.3843160&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4912459,30.3843160">Google точка</a>
             </div>
@@ -1713,6 +1964,7 @@
             <h3>Вул. Стеценка — об’їзд / контрольна точка</h3>
             <div class="coords">50.4889941, 30.3891474</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4889941,30.3891474">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4889941%2C30.3891474&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4889941,30.3891474">Google точка</a>
             </div>
@@ -1725,6 +1977,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4864722, 30.3944958</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4864722,30.3944958&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4864722%2C30.3944958&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4864722,30.3944958">Google точка</a>
             </div>
@@ -1747,6 +2000,18 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866865,30.3940478|50.4862564,30.3961078|50.4865785,30.3954329|50.4812652,30.4068151|50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862564,30.3961078|50.4865785,30.3954329|50.4812652,30.4068151|50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865785,30.3954329|50.4812652,30.4068151|50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4812652,30.4068151|50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4868829,30.3956604|50.4912720,30.3843146">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4912720,30.3843146">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate">Т.9</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862564%2C30.3961078&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865785%2C30.3954329&amp;navigate=yes">Т.3</a>
@@ -1765,6 +2030,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866865, 30.3940478</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866865,30.3940478|50.4862564,30.3961078|50.4865785,30.3954329|50.4812652,30.4068151|50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866865%2C30.3940478&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866865,30.3940478">Google точка</a>
             </div>
@@ -1777,6 +2043,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862564, 30.3961078</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862564,30.3961078|50.4865785,30.3954329|50.4812652,30.4068151|50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862564%2C30.3961078&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862564,30.3961078">Google точка</a>
             </div>
@@ -1789,6 +2056,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865785, 30.3954329</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865785,30.3954329|50.4812652,30.4068151|50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865785%2C30.3954329&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865785,30.3954329">Google точка</a>
             </div>
@@ -1801,6 +2069,7 @@
             <h3>Район Данила Щербаківського / Марченка — розворот</h3>
             <div class="coords">50.4812652, 30.4068151</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4812652,30.4068151|50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4812652%2C30.4068151&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4812652,30.4068151">Google точка</a>
             </div>
@@ -1813,6 +2082,7 @@
             <h3>Поворот на вул. Ігоря Турчина</h3>
             <div class="coords">50.4816885, 30.4025796</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4816885,30.4025796|50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4816885%2C30.4025796&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4816885,30.4025796">Google точка</a>
             </div>
@@ -1825,6 +2095,7 @@
             <h3>Поворот на вул. Мрії</h3>
             <div class="coords">50.4821459, 30.3957668</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4821459,30.3957668|50.4868829,30.3956604|50.4912720,30.3843146">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4821459%2C30.3957668&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4821459,30.3957668">Google точка</a>
             </div>
@@ -1837,6 +2108,7 @@
             <h3>Коло Мрії / Стеценка — виїзд на вул. Стеценка</h3>
             <div class="coords">50.4868829, 30.3956604</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4868829,30.3956604|50.4912720,30.3843146">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4868829%2C30.3956604&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4868829,30.3956604">Google точка</a>
             </div>
@@ -1849,6 +2121,7 @@
             <h3>Розворот / контрольна точка</h3>
             <div class="coords">50.4912720, 30.3843146</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4912720,30.3843146">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4912720%2C30.3843146&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4912720,30.3843146">Google точка</a>
             </div>
@@ -1861,6 +2134,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865635, 30.3944445</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3944445&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865635%2C30.3944445&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865635,30.3944445">Google точка</a>
             </div>
@@ -1883,6 +2157,15 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866301,30.3941763|50.4812652,30.4068151|50.4907284,30.4058833|50.4824124,30.4047406|50.4878704,30.3942704">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4812652,30.4068151|50.4907284,30.4058833|50.4824124,30.4047406|50.4878704,30.3942704">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4907284,30.4058833|50.4824124,30.4047406|50.4878704,30.3942704">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4824124,30.4047406|50.4878704,30.3942704">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878704,30.3942704">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate">Т.6</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4812652%2C30.4068151&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4907284%2C30.4058833&amp;navigate=yes">Т.3</a>
@@ -1898,6 +2181,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866301, 30.3941763</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866301,30.3941763|50.4812652,30.4068151|50.4907284,30.4058833|50.4824124,30.4047406|50.4878704,30.3942704">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866301%2C30.3941763&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866301,30.3941763">Google точка</a>
             </div>
@@ -1910,6 +2194,7 @@
             <h3>Поворот на вул. Данила Щербаківського</h3>
             <div class="coords">50.4812652, 30.4068151</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4812652,30.4068151|50.4907284,30.4058833|50.4824124,30.4047406|50.4878704,30.3942704">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4812652%2C30.4068151&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4812652,30.4068151">Google точка</a>
             </div>
@@ -1922,6 +2207,7 @@
             <h3>Розворот на вул. Некрасова</h3>
             <div class="coords">50.4907284, 30.4058833</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4907284,30.4058833|50.4824124,30.4047406|50.4878704,30.3942704">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4907284%2C30.4058833&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4907284,30.4058833">Google точка</a>
             </div>
@@ -1934,6 +2220,7 @@
             <h3>Поворот на вул. Стеценка</h3>
             <div class="coords">50.4824124, 30.4047406</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4824124,30.4047406|50.4878704,30.3942704">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4824124%2C30.4047406&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4824124,30.4047406">Google точка</a>
             </div>
@@ -1946,6 +2233,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878704, 30.3942704</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878704,30.3942704">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878704%2C30.3942704&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878704,30.3942704">Google точка</a>
             </div>
@@ -1958,6 +2246,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865662, 30.3943883</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865662,30.3943883&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865662%2C30.3943883&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865662,30.3943883">Google точка</a>
             </div>
@@ -1980,6 +2269,19 @@
         </a>
       </div>
       <div class="subblock">
+        <div class="subheading">Google Maps від мого місцезнаходження, починаючи з точки</div>
+        <div class="quick-row"><a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866720,30.3940745|50.4862409,30.3960405|50.4865785,30.3954329|50.4584959,30.3960484|50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Т.1</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862409,30.3960405|50.4865785,30.3954329|50.4584959,30.3960484|50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Т.2</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865785,30.3954329|50.4584959,30.3960484|50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Т.3</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4584959,30.3960484|50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Т.4</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Т.5</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Т.6</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Т.7</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866118,30.3961475|50.4878673,30.3942306">Т.8</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878673,30.3942306">Т.9</a>
+<a class="quick google-current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate">Т.10</a></div>
+      </div>
+      <div class="subblock">
         <div class="subheading">Waze по черзі до наступних точок</div>
         <div class="quick-row"><a class="quick" href="https://waze.com/ul?ll=50.4862409%2C30.3960405&amp;navigate=yes">Т.2</a>
 <a class="quick" href="https://waze.com/ul?ll=50.4865785%2C30.3954329&amp;navigate=yes">Т.3</a>
@@ -1999,6 +2301,7 @@
             <h3>Старт — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4866720, 30.3940745</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866720,30.3940745|50.4862409,30.3960405|50.4865785,30.3954329|50.4584959,30.3960484|50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866720%2C30.3940745&amp;navigate=yes">Waze до старту</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866720,30.3940745">Google точка</a>
             </div>
@@ -2011,6 +2314,7 @@
             <h3>Коло Мрії / Стеценка — в’їзд для проїзду прямо</h3>
             <div class="coords">50.4862409, 30.3960405</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4862409,30.3960405|50.4865785,30.3954329|50.4584959,30.3960484|50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4862409%2C30.3960405&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4862409,30.3960405">Google точка</a>
             </div>
@@ -2023,6 +2327,7 @@
             <h3>Коло Мрії / Стеценка — виїзд після проїзду прямо</h3>
             <div class="coords">50.4865785, 30.3954329</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4865785,30.3954329|50.4584959,30.3960484|50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865785%2C30.3954329&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865785,30.3954329">Google точка</a>
             </div>
@@ -2035,6 +2340,7 @@
             <h3>Поворот на Берестейський просп.</h3>
             <div class="coords">50.4584959, 30.3960484</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4584959,30.3960484|50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4584959%2C30.3960484&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4584959,30.3960484">Google точка</a>
             </div>
@@ -2047,6 +2353,7 @@
             <h3>Розворот через шляхопровід</h3>
             <div class="coords">50.4575260, 30.3880513</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4575260,30.3880513|50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4575260%2C30.3880513&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4575260,30.3880513">Google точка</a>
             </div>
@@ -2059,6 +2366,7 @@
             <h3>Розворот у районі Нивок</h3>
             <div class="coords">50.4581383, 30.3988594</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4581383,30.3988594|50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4581383%2C30.3988594&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4581383,30.3988594">Google точка</a>
             </div>
@@ -2071,6 +2379,7 @@
             <h3>Поворот на вул. Мрії</h3>
             <div class="coords">50.4605591, 30.3960895</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4605591,30.3960895|50.4866118,30.3961475|50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4605591%2C30.3960895&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4605591,30.3960895">Google точка</a>
             </div>
@@ -2083,6 +2392,7 @@
             <h3>Коло Мрії / Стеценка — виїзд на вул. Стеценка</h3>
             <div class="coords">50.4866118, 30.3961475</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4866118,30.3961475|50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4866118%2C30.3961475&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4866118,30.3961475">Google точка</a>
             </div>
@@ -2095,6 +2405,7 @@
             <h3>Поворот на Сирецько-Садову перед поверненням до ТСЦ</h3>
             <div class="coords">50.4878673, 30.3942306</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate&amp;waypoints=50.4878673,30.3942306">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4878673%2C30.3942306&amp;navigate=yes">Waze</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4878673,30.3942306">Google точка</a>
             </div>
@@ -2107,6 +2418,7 @@
             <h3>Фініш — ТСЦ МВС 8042, вул. Мрії, 19</h3>
             <div class="coords">50.4865635, 30.3943272</div>
             <div class="point-actions">
+              <a class="btn current" href="https://www.google.com/maps/dir/?api=1&amp;destination=50.4865635,30.3943272&amp;travelmode=driving&amp;dir_action=navigate">Google від мене → далі</a>
               <a class="btn waze" href="https://waze.com/ul?ll=50.4865635%2C30.3943272&amp;navigate=yes">Waze до фінішу</a>
               <a class="btn secondary" href="https://www.google.com/maps/search/?api=1&amp;query=50.4865635,30.3943272">Google точка</a>
             </div>
