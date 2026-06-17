@@ -32,3 +32,5 @@
 - `mvs_8042_routes_google_maps.csv` — Google Maps посилання.
 - `mvs_8042_routes_renamed.kml` — KML з оновленими назвами.
 - `mvs_8042_routes_renamed.gpx` — GPX з оновленими назвами.
+
+Маршрути з 10 або менше точками не розбиваються на частини для Google Maps.
