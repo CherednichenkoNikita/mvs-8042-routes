@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+<name>Маршрути ТСЦ МВС 8042</name>
+<Style id="route1"><LineStyle><color>ff0b57d0</color><width>5</width></LineStyle></Style>
+<Style id="route2"><LineStyle><color>ff00a9e0</color><width>5</width></LineStyle></Style>
+<Style id="route3"><LineStyle><color>ff188038</color><width>5</width></LineStyle></Style>
+<Style id="route4"><LineStyle><color>ffd93025</color><width>5</width></LineStyle></Style>
+<Style id="route5"><LineStyle><color>fff29900</color><width>5</width></LineStyle></Style>
+<Style id="route6"><LineStyle><color>ff7e57c2</color><width>5</width></LineStyle></Style>
+<Style id="route7"><LineStyle><color>ff795548</color><width>5</width></LineStyle></Style>
+<Style id="route8"><LineStyle><color>ffc2185b</color><width>5</width></LineStyle></Style>
+<Style id="route9"><LineStyle><color>ff607d8b</color><width>5</width></LineStyle></Style>
+<Style id="route10"><LineStyle><color>ff009688</color><width>5</width></LineStyle></Style>
+<Style id="route11"><LineStyle><color>ff3f51b5</color><width>5</width></LineStyle></Style>
+<Style id="route12"><LineStyle><color>ff9c27b0</color><width>5</width></LineStyle></Style>
+<Style id="route13"><LineStyle><color>ff4caf50</color><width>5</width></LineStyle></Style>
+<Style id="route14"><LineStyle><color>ffff5722</color><width>5</width></LineStyle></Style>
+<Style id="route15"><LineStyle><color>ff9e9e9e</color><width>5</width></LineStyle></Style>
+<Folder><name>Маршрут №1</name>
+<Placemark><name>Маршрут №1 — лінія</name><styleUrl>#route1</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3942046,50.4865819,0 30.3960940,50.4862451,0 30.3955791,50.4866666,0 30.4071635,50.4810374,0 30.4029943,50.4819282,0 30.3957863,50.4815977,0 30.3941388,50.4878223,0 30.3944231,50.4865083,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №1. Початок Маршруту</description><Point><coordinates>30.3942046,50.4865819,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №1. Розворот по колу 1</description><Point><coordinates>30.3960940,50.4862451,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №1. Розворот по колу 2</description><Point><coordinates>30.3955791,50.4866666,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №1. Розворот на Марченка</description><Point><coordinates>30.4071635,50.4810374,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Поворот на вул. Ігоря Турчина</name><description>Маршрут №1. Поворот на Турчина</description><Point><coordinates>30.4029943,50.4819282,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Повернення на вул. Мрії</name><description>Маршрут №1. Повернення на Мрії</description><Point><coordinates>30.3957863,50.4815977,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Сирецько-Садова — розворот і повернення до ТСЦ</name><description>Маршрут №1. Розворот через Сирецько-Садову</description><Point><coordinates>30.3941388,50.4878223,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №1. Завершення Маршруту</description><Point><coordinates>30.3944231,50.4865083,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №2</name>
+<Placemark><name>Маршрут №2 — лінія</name><styleUrl>#route2</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3941926,50.4865986,0 30.3792992,50.4935591,0 30.4090167,50.5073771,0 30.4075951,50.5072440,0 30.4057020,50.4821437,0 30.3953970,50.4865225,0 30.3962070,50.4863211,0 30.3942579,50.4878584,0 30.3944411,50.4865177,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №2. Початок Маршруту</description><Point><coordinates>30.3941926,50.4865986,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Поворот на вул. Газопровідну</name><description>Маршрут №2. Поворот на Газопровідну</description><Point><coordinates>30.3792992,50.4935591,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Івана Виговського / просп. Європейського Союзу — в’їзд</name><description>Маршрут №2. Розворот по колу 1</description><Point><coordinates>30.4090167,50.5073771,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Коло Івана Виговського / просп. Європейського Союзу — виїзд</name><description>Маршрут №2. Розворот по колу 2</description><Point><coordinates>30.4075951,50.5072440,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Поворот на вул. Стеценка</name><description>Маршрут №2. Поворот на стеценка</description><Point><coordinates>30.4057020,50.4821437,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №2. Розворот по колу 1</description><Point><coordinates>30.3953970,50.4865225,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №2. Розворот по колу 2</description><Point><coordinates>30.3962070,50.4863211,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №2. Поворот на Сирецько-Садову</description><Point><coordinates>30.3942579,50.4878584,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №2. Завершення Маршруту</description><Point><coordinates>30.3944411,50.4865177,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №3</name>
+<Placemark><name>Маршрут №3 — лінія</name><styleUrl>#route3</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3941706,50.4866143,0 30.3943120,50.4873407,0 30.3960858,50.4862313,0 30.3954930,50.4866255,0 30.4072924,50.4809593,0 30.3993498,50.4814638,0 30.3959536,50.4719213,0 30.3962091,50.4865494,0 30.3942440,50.4878561,0 30.3944730,50.4865287,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №3. Початок Маршруту</description><Point><coordinates>30.3941706,50.4866143,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Виїзд від ТСЦ на вул. Стеценка</name><description>Маршрут №3. Виїзд на Стеценка</description><Point><coordinates>30.3943120,50.4873407,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №3. Розворот по колу 1</description><Point><coordinates>30.3960858,50.4862313,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №3. Розворот по колу 2</description><Point><coordinates>30.3954930,50.4866255,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №3. Розворот по Марчука</description><Point><coordinates>30.4072924,50.4809593,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Вул. Ігоря Турчина — контрольна точка</name><description>Маршрут №3. Турчина</description><Point><coordinates>30.3993498,50.4814638,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Розворот на вул. Салютній</name><description>Маршрут №3. Розворот на Салютній</description><Point><coordinates>30.3959536,50.4719213,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Коло Мрії / Стеценка — контрольна точка</name><description>Маршрут №3. Повернення на Стеценка</description><Point><coordinates>30.3962091,50.4865494,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №3. Поворот на Сирецько-Садову</description><Point><coordinates>30.3942440,50.4878561,0</coordinates></Point></Placemark>
+<Placemark><name>10 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №3. Завершення Маршруту</description><Point><coordinates>30.3944730,50.4865287,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №4</name>
+<Placemark><name>Маршрут №4 — лінія</name><styleUrl>#route4</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3940689,50.4866718,0 30.3960940,50.4862451,0 30.3954385,50.4865760,0 30.4070384,50.4811307,0 30.4057989,50.4722305,0 30.3959548,50.4726402,0 30.3956716,50.4868422,0 30.3941866,50.4878534,0 30.3942564,50.4866144,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №4. Початок маршруту</description><Point><coordinates>30.3940689,50.4866718,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №4. Розворот по колу 1</description><Point><coordinates>30.3960940,50.4862451,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №4. Розворот по колу 2</description><Point><coordinates>30.3954385,50.4865760,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №4. Розворот через Марченка</description><Point><coordinates>30.4070384,50.4811307,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Поворот на вул. Салютній</name><description>Маршрут №4. Поворот на Салютній</description><Point><coordinates>30.4057989,50.4722305,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Поворот на вул. Мрії</name><description>Маршрут №4. Поворот на Мрії</description><Point><coordinates>30.3959548,50.4726402,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Коло Мрії / Стеценка — контрольна точка</name><description>Маршрут №4. Поворот на Стеценка</description><Point><coordinates>30.3956716,50.4868422,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №4. Поворот на Сирецько-Садову</description><Point><coordinates>30.3941866,50.4878534,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №4. Завершення маршруту</description><Point><coordinates>30.3942564,50.4866144,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №5</name>
+<Placemark><name>Маршрут №5 — лінія</name><styleUrl>#route5</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3940689,50.4866718,0 30.3961152,50.4862406,0 30.3954339,50.4865564,0 30.4065793,50.4813582,0 30.4058279,50.4699381,0 30.4051154,50.4821696,0 30.3943978,50.4872997,0 30.3943052,50.4865714,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №5. Початок маршруту</description><Point><coordinates>30.3940689,50.4866718,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №5. Розворот по колу 1</description><Point><coordinates>30.3961152,50.4862406,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №5. Розворот по колу 2</description><Point><coordinates>30.3954339,50.4865564,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №5. Розворот на Марченка</description><Point><coordinates>30.4065793,50.4813582,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Розворот на вул. Ружинській</name><description>Маршрут №5. Розворот на Ружинській</description><Point><coordinates>30.4058279,50.4699381,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Район Данила Щербаківського / Марченка — поворот</name><description>Маршрут №5. Поворот на Марченка</description><Point><coordinates>30.4051154,50.4821696,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Заїзд до ТСЦ МВС 8042 з вул. Стеценка</name><description>Маршрут №5. Поворот на СЦ</description><Point><coordinates>30.3943978,50.4872997,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №5. Завершення маршруту</description><Point><coordinates>30.3943052,50.4865714,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №6</name>
+<Placemark><name>Маршрут №6 — лінія</name><styleUrl>#route6</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3941282,50.4866362,0 30.3961291,50.4862983,0 30.3953834,50.4865611,0 30.3957471,50.4814608,0 30.3964085,50.4862876,0 30.4069666,50.4811924,0 30.4018875,50.4814989,0 30.3960940,50.4862451,0 30.3944411,50.4865177,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №6. Початок маршруту</description><Point><coordinates>30.3941282,50.4866362,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №6. Розворот по колу 1</description><Point><coordinates>30.3961291,50.4862983,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №6. Розворот по колу 2</description><Point><coordinates>30.3953834,50.4865611,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Розворот на вул. Ігоря Турчина</name><description>Маршрут №6. Розворот на Турчини</description><Point><coordinates>30.3957471,50.4814608,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Коло Мрії / Стеценка — контрольна точка</name><description>Маршрут №6. Поворот на Стеценка</description><Point><coordinates>30.3964085,50.4862876,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №6. Розворот на Марченка</description><Point><coordinates>30.4069666,50.4811924,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Поворот на вул. Ігоря Турчина</name><description>Маршрут №6. Поворот на Турчини</description><Point><coordinates>30.4018875,50.4814989,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Коло Мрії / Стеценка — виїзд на вул. Стеценка</name><description>Маршрут №6. Поворот по колу на Стеценка</description><Point><coordinates>30.3960940,50.4862451,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №6. Завершення маршруту</description><Point><coordinates>30.3944411,50.4865177,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №7</name>
+<Placemark><name>Маршрут №7 — лінія</name><styleUrl>#route7</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3940810,50.4866570,0 30.3960499,50.4862422,0 30.3954385,50.4865760,0 30.3960568,50.4645744,0 30.3961014,50.4866311,0 30.3942579,50.4878584,0 30.3943052,50.4865714,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №7. Початок маршруту</description><Point><coordinates>30.3940810,50.4866570,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №7. Розворот по колу 1</description><Point><coordinates>30.3960499,50.4862422,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №7. Розворот по колу 2</description><Point><coordinates>30.3954385,50.4865760,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Розворот на вул. Естонській</name><description>Маршрут №7. Розворот на Естонській</description><Point><coordinates>30.3960568,50.4645744,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Коло Мрії / Стеценка — виїзд на вул. Стеценка</name><description>Маршрут №7. Поворот по колу на Стеценка</description><Point><coordinates>30.3961014,50.4866311,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №7. Поворот на Сирецько-Садову</description><Point><coordinates>30.3942579,50.4878584,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №7. Завершення маршруту</description><Point><coordinates>30.3943052,50.4865714,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №8</name>
+<Placemark><name>Маршрут №8 — лінія</name><styleUrl>#route8</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3940689,50.4866718,0 30.3960499,50.4862422,0 30.3953970,50.4865225,0 30.3653566,50.4982961,0 30.3661934,50.4970677,0 30.3962218,50.4862465,0 30.3942440,50.4878561,0 30.3942459,50.4865805,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №8. Початок маршруту</description><Point><coordinates>30.3940689,50.4866718,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №8. Розворот по колу 1</description><Point><coordinates>30.3960499,50.4862422,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №8. Розворот по колу 2</description><Point><coordinates>30.3953970,50.4865225,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Виїзд у напрямку Кільцевої дороги</name><description>Маршрут №8. Виїзд на Кільцеву</description><Point><coordinates>30.3653566,50.4982961,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Вул. Стеценка — розворот</name><description>Маршрут №8. Розворот на Стеценка</description><Point><coordinates>30.3661934,50.4970677,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Коло Мрії / Стеценка — проїзд по колу</name><description>Маршрут №8. Розворот по колу</description><Point><coordinates>30.3962218,50.4862465,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №8. Поворот на Сирецько-Садову</description><Point><coordinates>30.3942440,50.4878561,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №8. Завершення маршруту</description><Point><coordinates>30.3942459,50.4865805,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №9</name>
+<Placemark><name>Маршрут №9 — лінія</name><styleUrl>#route9</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3941282,50.4866362,0 30.3960499,50.4862422,0 30.3954385,50.4865760,0 30.3960054,50.4814682,0 30.4062730,50.4809598,0 30.4149446,50.4657908,0 30.4156098,50.4678463,0 30.4070384,50.4811307,0 30.3942819,50.4878857,0 30.3944576,50.4865086,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №9. Початок маршруту</description><Point><coordinates>30.3941282,50.4866362,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №9. Розворот по колу 1</description><Point><coordinates>30.3960499,50.4862422,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №9. Розворот по колу 2</description><Point><coordinates>30.3954385,50.4865760,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Поворот на вул. Ігоря Турчина</name><description>Маршрут №9. Поворот на Турчина</description><Point><coordinates>30.3960054,50.4814682,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №9. Виїзд на Марченка</description><Point><coordinates>30.4062730,50.4809598,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Виїзд на вул. Януша Корчака</name><description>Маршрут №9. Виїзд на Корчака</description><Point><coordinates>30.4149446,50.4657908,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Розворот у районі вул. Голди Меїр</name><description>Маршрут №9. Розворот через Меїр</description><Point><coordinates>30.4156098,50.4678463,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №9. Виїзд на Марченка</description><Point><coordinates>30.4070384,50.4811307,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Сирецько-Садова — повернення до ТСЦ</name><description>Маршрут №9. Поворот через Сирецько-Садову</description><Point><coordinates>30.3942819,50.4878857,0</coordinates></Point></Placemark>
+<Placemark><name>10 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №9. Завершення Маршруту</description><Point><coordinates>30.3944576,50.4865086,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №10</name>
+<Placemark><name>Маршрут №10 — лінія</name><styleUrl>#route10</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3941531,50.4866211,0 30.3960499,50.4862422,0 30.3954385,50.4865760,0 30.3987898,50.4719594,0 30.4065359,50.4698503,0 30.4148078,50.4711638,0 30.3959690,50.4728394,0 30.3960824,50.4866930,0 30.3942579,50.4878584,0 30.3944411,50.4865177,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №10. Початок маршруту</description><Point><coordinates>30.3941531,50.4866211,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №10. Розворот по колу 1</description><Point><coordinates>30.3960499,50.4862422,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №10. Розворот по колу 2</description><Point><coordinates>30.3954385,50.4865760,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Поворот на вул. Салютній</name><description>Маршрут №10. Поворот на Салютну</description><Point><coordinates>30.3987898,50.4719594,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Поворот на вул. Ружинську</name><description>Маршрут №10. Поворот на Ружинську</description><Point><coordinates>30.4065359,50.4698503,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Поворот на вул. Вірського</name><description>Маршрут №10. Поворот на Вірського</description><Point><coordinates>30.4148078,50.4711638,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Поворот на вул. Мрії</name><description>Маршрут №10. Поворот на Мрії</description><Point><coordinates>30.3959690,50.4728394,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Коло Мрії / Стеценка — виїзд на вул. Стеценка</name><description>Маршрут №10. Поворот по колу на Стеценка</description><Point><coordinates>30.3960824,50.4866930,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №10. Поворот на Сирецько-Садову</description><Point><coordinates>30.3942579,50.4878584,0</coordinates></Point></Placemark>
+<Placemark><name>10 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №10. Завершення маршруту</description><Point><coordinates>30.3944411,50.4865177,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №11</name>
+<Placemark><name>Маршрут №11 — лінія</name><styleUrl>#route11</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3941481,50.4866331,0 30.3961061,50.4862338,0 30.3954329,50.4865785,0 30.3957447,50.4815364,0 30.3942697,50.4878849,0 30.3841608,50.4912993,0 30.3915369,50.4877703,0 30.3960376,50.4862276,0 30.3941923,50.4878727,0 30.3943478,50.4865996,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №11. Початок маршруту</description><Point><coordinates>30.3941481,50.4866331,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №11. Розворот по колу 1</description><Point><coordinates>30.3961061,50.4862338,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №11. Розворот по колу 2</description><Point><coordinates>30.3954329,50.4865785,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Розворот на вул. Ігоря Турчина</name><description>Маршрут №11. Розворот на Турчина</description><Point><coordinates>30.3957447,50.4815364,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №11. Поворот на Сирецько-Садову</description><Point><coordinates>30.3942697,50.4878849,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Розворот / контрольна точка</name><description>Маршрут №11. Розворот</description><Point><coordinates>30.3841608,50.4912993,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Вул. Стеценка — об’їзд через парковку</name><description>Маршрут №11. Поворот через парковку</description><Point><coordinates>30.3915369,50.4877703,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Коло Мрії / Стеценка — проїзд по колу</name><description>Маршрут №11. Розворот по колу</description><Point><coordinates>30.3960376,50.4862276,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №11. Поворот на Сирецько-Садову</description><Point><coordinates>30.3941923,50.4878727,0</coordinates></Point></Placemark>
+<Placemark><name>10 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №11. Завершення маршруту</description><Point><coordinates>30.3943478,50.4865996,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №12</name>
+<Placemark><name>Маршрут №12 — лінія</name><styleUrl>#route12</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3941869,50.4866150,0 30.3960859,50.4862336,0 30.3954419,50.4865872,0 30.4066894,50.4813180,0 30.4020576,50.4815194,0 30.3957598,50.4823421,0 30.3843160,50.4912459,0 30.3891474,50.4889941,0 30.3944958,50.4864722,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №12. Початок маршруту</description><Point><coordinates>30.3941869,50.4866150,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №12. Розворот по колу 1</description><Point><coordinates>30.3960859,50.4862336,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №12. Розворот по колу 2</description><Point><coordinates>30.3954419,50.4865872,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №12. Розворот на Марченка</description><Point><coordinates>30.4066894,50.4813180,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Поворот на вул. Ігоря Турчина</name><description>Маршрут №12. Поворот на Турчина</description><Point><coordinates>30.4020576,50.4815194,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Поворот на вул. Мрії</name><description>Маршрут №12. Поворот на Мрії</description><Point><coordinates>30.3957598,50.4823421,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Вул. Стеценка — розворот</name><description>Маршрут №12. Розворот на Стеценка</description><Point><coordinates>30.3843160,50.4912459,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Вул. Стеценка — об’їзд / контрольна точка</name><description>Маршрут №12. Обїзд на Стеценка</description><Point><coordinates>30.3891474,50.4889941,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №12. Завершення маршруту</description><Point><coordinates>30.3944958,50.4864722,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №13</name>
+<Placemark><name>Маршрут №13 — лінія</name><styleUrl>#route13</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3940478,50.4866865,0 30.3961078,50.4862564,0 30.3954329,50.4865785,0 30.4068151,50.4812652,0 30.4025796,50.4816885,0 30.3957668,50.4821459,0 30.3956604,50.4868829,0 30.3843146,50.4912720,0 30.3944445,50.4865635,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №13. Початок маршруту</description><Point><coordinates>30.3940478,50.4866865,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №13. Розворот по колу 1</description><Point><coordinates>30.3961078,50.4862564,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №13. Розворот по колу 2</description><Point><coordinates>30.3954329,50.4865785,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Район Данила Щербаківського / Марченка — розворот</name><description>Маршрут №13. Розворот по Марченка</description><Point><coordinates>30.4068151,50.4812652,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Поворот на вул. Ігоря Турчина</name><description>Маршрут №13. Поворот на Турчини</description><Point><coordinates>30.4025796,50.4816885,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Поворот на вул. Мрії</name><description>Маршрут №13. Поворот на Мрії</description><Point><coordinates>30.3957668,50.4821459,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Коло Мрії / Стеценка — виїзд на вул. Стеценка</name><description>Маршрут №13. Поворот по колу на Стеценка</description><Point><coordinates>30.3956604,50.4868829,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Розворот / контрольна точка</name><description>Маршрут №13. Розворот</description><Point><coordinates>30.3843146,50.4912720,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №13. Завершення маршруту</description><Point><coordinates>30.3944445,50.4865635,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №14</name>
+<Placemark><name>Маршрут №14 — лінія</name><styleUrl>#route14</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3941763,50.4866301,0 30.4068151,50.4812652,0 30.4058833,50.4907284,0 30.4047406,50.4824124,0 30.3942704,50.4878704,0 30.3943883,50.4865662,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №14. Початок маршруту</description><Point><coordinates>30.3941763,50.4866301,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Поворот на вул. Данила Щербаківського</name><description>Маршрут №14. Поворот на Щербаківського</description><Point><coordinates>30.4068151,50.4812652,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Розворот на вул. Некрасова</name><description>Маршрут №14. Розворот на Некрасова</description><Point><coordinates>30.4058833,50.4907284,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Поворот на вул. Стеценка</name><description>Маршрут №14. Поворот на Стеценка</description><Point><coordinates>30.4047406,50.4824124,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №14. Поворот на Сирецько-Садову</description><Point><coordinates>30.3942704,50.4878704,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №14. Завершення маршруту</description><Point><coordinates>30.3943883,50.4865662,0</coordinates></Point></Placemark>
+</Folder>
+<Folder><name>Маршрут №15</name>
+<Placemark><name>Маршрут №15 — лінія</name><styleUrl>#route15</styleUrl><LineString><tessellate>1</tessellate><coordinates>30.3940745,50.4866720,0 30.3960405,50.4862409,0 30.3954329,50.4865785,0 30.3960484,50.4584959,0 30.3880513,50.4575260,0 30.3988594,50.4581383,0 30.3960895,50.4605591,0 30.3961475,50.4866118,0 30.3942306,50.4878673,0 30.3943272,50.4865635,0</coordinates></LineString></Placemark>
+<Placemark><name>01 — Старт — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №15. Початок маршруту</description><Point><coordinates>30.3940745,50.4866720,0</coordinates></Point></Placemark>
+<Placemark><name>02 — Коло Мрії / Стеценка — в’їзд для проїзду прямо</name><description>Маршрут №15. Розворот по колу 1</description><Point><coordinates>30.3960405,50.4862409,0</coordinates></Point></Placemark>
+<Placemark><name>03 — Коло Мрії / Стеценка — виїзд після проїзду прямо</name><description>Маршрут №15. Розворот по колу 2</description><Point><coordinates>30.3954329,50.4865785,0</coordinates></Point></Placemark>
+<Placemark><name>04 — Поворот на Берестейський просп.</name><description>Маршрут №15. Поворот на Берестейський просп.</description><Point><coordinates>30.3960484,50.4584959,0</coordinates></Point></Placemark>
+<Placemark><name>05 — Розворот через шляхопровід</name><description>Маршрут №15. Розворот через шляхопровід</description><Point><coordinates>30.3880513,50.4575260,0</coordinates></Point></Placemark>
+<Placemark><name>06 — Розворот у районі Нивок</name><description>Маршрут №15. Розворот на Нивках</description><Point><coordinates>30.3988594,50.4581383,0</coordinates></Point></Placemark>
+<Placemark><name>07 — Поворот на вул. Мрії</name><description>Маршрут №15. Поворот на Мрії</description><Point><coordinates>30.3960895,50.4605591,0</coordinates></Point></Placemark>
+<Placemark><name>08 — Коло Мрії / Стеценка — виїзд на вул. Стеценка</name><description>Маршрут №15. Поворот по колу на Стеценка</description><Point><coordinates>30.3961475,50.4866118,0</coordinates></Point></Placemark>
+<Placemark><name>09 — Поворот на Сирецько-Садову перед поверненням до ТСЦ</name><description>Маршрут №15. Поворот на Сирецько-Садову</description><Point><coordinates>30.3942306,50.4878673,0</coordinates></Point></Placemark>
+<Placemark><name>10 — Фініш — ТСЦ МВС 8042, вул. Мрії, 19</name><description>Маршрут №15. Завершення маршруту</description><Point><coordinates>30.3943272,50.4865635,0</coordinates></Point></Placemark>
+</Folder>
+</Document>
+</kml>
